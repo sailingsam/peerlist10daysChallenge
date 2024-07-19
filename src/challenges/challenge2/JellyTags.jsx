@@ -54,7 +54,7 @@ export default function JellyTags() {
     <div className="flex items-center justify-center h-screen w-full m-auto">
       <div className="p-10 lg:max-w-5xl">
         <h1 className="text-start text-3xl font-bold mb-8">
-          What are your favorite cuisines?
+          What are your favourite cuisines?
         </h1>
         <div className="h-fit flex flex-wrap">
           {cuisines.map((cuisine, index) => (
