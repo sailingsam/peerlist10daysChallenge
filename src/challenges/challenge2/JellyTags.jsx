@@ -5,53 +5,38 @@ import { FaCircleCheck } from "react-icons/fa6";
 }
 
 export default function JellyTags() {
-  const cuisines = [
-    {
-      name: "Indian",
-    },
-    {
-      name: "Italian",
-    },
-    {
-      name: "Spanish",
-    },
-    {
-      name: "Chinese",
-    },
-    {
-      name: "Japanese",
-    },
-    {
-      name: "Thai",
-    },
-    {
-      name: "Mediterranean",
-    },
-    {
-      name: "American",
-    },
-    {
-      name: "French",
-    },
-    {
-      name: "Greek",
-    },
-    {
-      name: "Korean",
-    },
-    {
-      name: "Vietnamese",
-    },
-    {
-      name: "Mexican",
-    },
-    {
-      name: "Lebanese",
-    },
-    {
-      name: "Turkish",
-    },
-  ];
+    const cuisines = [
+        { name: "Indian" },
+        { name: "Italian" },
+        { name: "Spanish" },
+        { name: "Chinese" },
+        { name: "Japanese" },
+        { name: "Thai" },
+        { name: "Mediterranean" },
+        { name: "American" },
+        { name: "French" },
+        { name: "Greek" },
+        { name: "Korean" },
+        { name: "Vietnamese" },
+        { name: "Mexican" },
+        { name: "Lebanese" },
+        { name: "Turkish" },
+        { name: "Moroccan" },
+        { name: "Brazilian" },
+        { name: "Peruvian" },
+        { name: "Argentinian" },
+        { name: "German" },
+        { name: "British" },
+        { name: "Portuguese" },
+        { name: "Russian" },
+        { name: "African" },
+        { name: "Caribbean" },
+        { name: "Middle Eastern" },
+        { name: "Nordic" },
+        { name: "Eastern European" },
+        { name: "Australian" },
+        { name: "Canadian" }
+      ];
   const [selectedCuisine, setSelectedCuisine] = useState([]);
 
   const toggleCuisine = (cuisineName) => {
@@ -83,7 +68,7 @@ export default function JellyTags() {
             >
               {cuisine.name}
               {selectedCuisine.includes(cuisine.name) && (
-                <FaCircleCheck className="ml-2 text-white animate-slide-up" />
+                <FaCircleCheck className="ml-2 text-white animate-slideUp" />
               )}
             </span>
           ))}

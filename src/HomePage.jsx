@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import challenge1Gif from "./challenges/challenge1/1.gif"; // Adjust the import path as necessary
+import challenge1Gif from "./challenges/challenge1/1.gif";
+import challenge2Gif from "./challenges/challenge2/2.gif";
 
 const challenges = [
   {
     gif: challenge1Gif,
-    description: "Challenge 1 Description",
-    challengePage: "Challenge1", // This will be used as a placeholder
+    description: "UpVote Button",
+    challengePage: "Challenge1",
   },{
-    gif: challenge1Gif,
-    description: "Challenge 2 Description",
-    challengePage: "Challenge2", // This will be used as a placeholder
+    gif: challenge2Gif,
+    description: "Jelly Tags",
+    challengePage: "Challenge2",
   }
 ];
 
@@ -28,7 +29,7 @@ function HomePage() {
             >
               <img
                 src={challenge.gif}
-                alt={`Challenge ${index + 1}`}
+                alt={challenge.challengePage}
                 className="mb-4"
               />
               <span>{challenge.description}</span>
