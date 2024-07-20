@@ -29,21 +29,31 @@ export default function MelodyPopup() {
     const setAudioData = () => {
       setDuration(audio.current.duration);
     };
+
     const updateAudioTime = () => {
       setCurrentPosition(audio.current.currentTime);
     };
+
+    const onAudioEnd = () => {
+      setIsPlaying(false);
+      setCurrentPosition(0); // Optionally reset the currentPosition to 0
+    };
+
     audio.current.addEventListener("loadedmetadata", setAudioData);
     audio.current.addEventListener("timeupdate", updateAudioTime);
+    audio.current.addEventListener("ended", onAudioEnd);
+
     return () => {
       audio.current.removeEventListener("loadedmetadata", setAudioData);
       audio.current.removeEventListener("timeupdate", updateAudioTime);
+      audio.current.removeEventListener("ended", onAudioEnd);
     };
-  }, []);
+  }, [audio, setIsPlaying]);
 
   return (
     <div className="bg-gray-600 flex items-center justify-center h-screen w-full m-auto">
       <div
-        className={`bg-white w-96 p-3 ${
+        className={`bg-white w-96 p-3 container ${
           isPlaying ? "flex flex-col" : "flex flex-row"
         } justify-between shadow-2xl shadow-black rounded-lg`}
         onMouseEnter={() => setIsHovered(true)}
@@ -66,7 +76,6 @@ export default function MelodyPopup() {
               max={duration}
               value={currentPosition}
               onChange={onSeek}
-              // tipFormatter={(value) => `${Math.round(value)}s`}
             />
           )}
           <div className="flex justify-between items-center w-full">
@@ -77,7 +86,7 @@ export default function MelodyPopup() {
               </span>
             </div>
             <div
-              className={`bg-black text-white flex gap-1 items-center ${
+              className={`bg-black text-white flex gap-1 shadow shadow-black items-center ${
                 isHovered || isPlaying ? "py-1 px-2" : "p-2"
               } rounded-full h-fit cursor-pointer play-pause-button`}
               onClick={togglePlay}

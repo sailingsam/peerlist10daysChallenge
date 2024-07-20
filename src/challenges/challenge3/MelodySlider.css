@@ -33,3 +33,17 @@
 .play-pause-button .pause-icon {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+.container {
+  display: flex;
+  transition: all 0.5s ease; /* Adjust the transition as needed */
+}
+
+.row-layout {
+  flex-direction: row;
+  /* Additional styling for row layout */
+}
+
+.column-layout {
+  flex-direction: column;
+  /* Additional styling for column layout */
+}

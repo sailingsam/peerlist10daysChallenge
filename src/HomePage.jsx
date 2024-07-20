@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import challenge1Gif from "./challenges/challenge1/1.gif";
 import challenge2Gif from "./challenges/challenge2/2.gif";
+import challenge3Gif from "./challenges/challenge3/3.gif";
 
 const challenges = [
   {
@@ -12,6 +13,11 @@ const challenges = [
     gif: challenge2Gif,
     description: "Jelly Tags",
     challengePage: "Challenge2",
+  }
+  ,{
+    gif: challenge3Gif,
+    description: "Melody Popup",
+    challengePage: "Challenge3",
   }
 ];
 
