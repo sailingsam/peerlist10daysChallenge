@@ -25,7 +25,7 @@ function HomePage() {
         {challenges.map((challenge, index) => (
           <Link to={`/${index + 1}`} key={index}>
             <div
-              className="bg-white p-4 rounded-lg shadow flex flex-col items-center"
+              className="bg-white p-4 rounded-lg shadow-xl hover:shadow-gray-700 flex flex-col items-center"
             >
               <img
                 src={challenge.gif}
