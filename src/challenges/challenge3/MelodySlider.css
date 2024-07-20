@@ -1,0 +1,35 @@
+/* Change the track color */
+.ant-slider-track {
+    background-color: black !important; 
+  }
+  
+  /* Change the rail color */
+  .ant-slider-rail {
+    background-color: #e4e4e4 !important;
+  }
+  
+  /* Change the handle color */
+  .ant-slider-handle {
+    border-color: black !important; 
+  }
+
+#img {
+  transition: transform 0.3s ease-in-out;
+}
+
+#img.isPlaying {
+  transform: scale(1.05);
+}
+
+.play-pause-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.play-pause-button:hover {
+  transform: scale(1.1);
+}
+
+.play-pause-button .play-icon,
+.play-pause-button .pause-icon {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
