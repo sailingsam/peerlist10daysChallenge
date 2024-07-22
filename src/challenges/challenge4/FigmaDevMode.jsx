@@ -32,7 +32,7 @@ export default function FigmaDevMode() {
       variants={parentVariants}
       transition={{ duration: 1, ease: "easeInOut", easings: "easeInOut" }}
     >
-      <div className="bg-white rounded-xl h-16 flex justify-center items-center cursor-pointer">
+      <div className="bg-white rounded-xl h-16 h-fit flex flex-col sm:flex-row justify-center items-center cursor-pointer">
         <motion.div
           initial={{ opacity: 0, y: -50, display: "none" }}
           animate={isDevMode ? "visible" : "hidden"}
@@ -41,9 +41,9 @@ export default function FigmaDevMode() {
             hidden: { opacity: 0, y: 15, display: "none" },
           }}
           transition={{ duration: 0.4, delay: !isDevMode ? 0 : 0.4 }}
-          className="p-2 pr-3 h-full flex items-center gap-4"
+          className="p-2 pr-3 h-full flex flex-col sm:flex-row items-center gap-4"
         >
-          <div className="p-2 pr-3 h-full flex items-center gap-4">
+          <div className="p-2 pr-3 h-full flex flex-col sm:flex-row items-center gap-4">
             <div className="flex items-center">
               <LuMousePointer2 className="bg-green-600 h-full w-12 p-2 text-white rounded-xl flex justify-center items-center" />
               <FaChevronDown className="ml-[2px]" />
@@ -68,7 +68,7 @@ export default function FigmaDevMode() {
           transition={{ duration: 0.4, delay: isDevMode ? 0 : 0.4 }}
           className="p-2 pr-3 h-full flex items-center gap-6"
         >
-          <div className="p-2 pr-3 h-full flex items-center gap-6">
+          <div className="p-2 pr-3 h-full flex flex-col sm:flex-row items-center gap-6">
             <div className="flex items-center">
               <LuMousePointer2 className="bg-blue-600 h-full w-12 p-2 text-white rounded-xl flex justify-center items-center" />
               <FaChevronDown className="ml-[2px]" />
@@ -102,7 +102,7 @@ export default function FigmaDevMode() {
 
         {/* below is second part which is perfectly working */}
         <div className="p-3 h-full dev-mode">
-          <label class="toggle-switch h-full w-[60px]">
+          <label class="toggle-switch  h-[40px] sm:h-10 w-[60px]">
             <input type="checkbox" onChange={toggleDevMode} />
             <div class="toggle-switch-background">
               <div class="toggle-switch-handle flex justify-center items-center">
