@@ -62,7 +62,7 @@ export default function FigmaDevMode() {
         <motion.dev
           animate={isDevMode ? "hidden" : "visible"}
           variants={{
-            hidden: { opacity: 0, y: -20, display: "none" },
+            hidden: { opacity: 0, x: 40, display: "none" },
             visible: { opacity: 1, y: 0, display: "block" },
           }}
           transition={{ duration: 0.4, delay: isDevMode ? 0 : 0.4 }}
