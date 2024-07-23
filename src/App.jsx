@@ -5,6 +5,7 @@ import { Challenge1 } from "./challenges/challenge1";
 import { Challenge2 } from "./challenges/challenge2";
 import { Challenge3 } from "./challenges/challenge3";
 import { Challenge4 } from "./challenges/challenge4";
+import { Challenge5 } from "./challenges/challenge5";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/2" element={<Challenge2 />} />
         <Route path="/3" element={<Challenge3 />} />
         <Route path="/4" element={<Challenge4 />} />
+        <Route path="/5" element={<Challenge5 />} />
       </Routes>
     </BrowserRouter>
   );
