@@ -5,6 +5,7 @@ import challenge2Gif from "./challenges/challenge2/2.gif";
 import challenge3Gif from "./challenges/challenge3/3.gif";
 import challenge4Gif from "./challenges/challenge4/4.gif";
 import challenge5Gif from "./challenges/challenge5/5.gif";
+import challenge6Gif from "./challenges/challenge6/6.gif";
 
 const challenges = [
   {
@@ -32,6 +33,11 @@ const challenges = [
     description: "Action Toolbar",
     challengePage: "Challenge5",
   },
+  {
+    gif: challenge6Gif,
+    description: "Page Switch Transition",
+    challengePage: "Challenge6",
+  },
 ];
 
 function HomePage() {
@@ -40,16 +46,16 @@ function HomePage() {
       <h1 className="text-center text-3xl font-bold mb-8">
         Peerlist Interaction Design Challenge #ixdchallenge
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {challenges.map((challenge, index) => (
           <Link to={`/${index + 1}`} key={index}>
-            <div className="bg-white p-4 rounded-lg shadow-xl hover:shadow-gray-700 flex flex-col items-center">
+            <div className="bg-white h-full p-4 rounded-lg shadow-xl hover:shadow-gray-700 flex flex-col items-center">
               <img
                 src={challenge.gif}
                 alt={challenge.challengePage}
                 className="mb-4"
               />
-              <span>{challenge.description}</span>
+              <span className="text-xs sm:text-base">{challenge.description}</span>
             </div>
           </Link>
         ))}
