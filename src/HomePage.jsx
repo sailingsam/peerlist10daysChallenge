@@ -4,6 +4,7 @@ import challenge1Gif from "./challenges/challenge1/1.gif";
 import challenge2Gif from "./challenges/challenge2/2.gif";
 import challenge3Gif from "./challenges/challenge3/3.gif";
 import challenge4Gif from "./challenges/challenge4/4.gif";
+import challenge5Gif from "./challenges/challenge5/5.gif";
 
 const challenges = [
   {
@@ -25,6 +26,11 @@ const challenges = [
     gif: challenge4Gif,
     description: "Figma Dev Mode",
     challengePage: "Challenge4",
+  },
+  {
+    gif: challenge5Gif,
+    description: "Action Toolbar",
+    challengePage: "Challenge5",
   },
 ];
 

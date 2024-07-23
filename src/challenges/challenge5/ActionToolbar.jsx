@@ -22,22 +22,28 @@ export default function ActionToolbar() {
   };
 
   const deploy = () => {
-    setDeployStatus((prevStatus) => (prevStatus === "Failed" ? "Redeploy" : "Failed"));
+    setDeployStatus((prevStatus) =>
+      prevStatus === "Failed" ? "Redeploy" : "Failed"
+    );
     setIsCompiled(!isCompiled);
   };
 
   const analytics = () => {
-    setAnalyticsStatus((prevStatus) => (prevStatus === "Analytics" ? "Close" : "Analytics"));
+    setAnalyticsStatus((prevStatus) =>
+      prevStatus === "Analytics" ? "Close" : "Analytics"
+    );
   };
 
   const billing = () => {
-    setBillingStatus((prevStatus) => (prevStatus === "Billing" ? "See Pro" : "Billing"));
+    setBillingStatus((prevStatus) =>
+      prevStatus === "Billing" ? "See Pro" : "Billing"
+    );
   };
 
   const buttonVariants = {
     initial: { scale: 1 },
-    hover: { scale: 1.1 },
-    tap: { scale: 0.9 },
+    // hover: { scale: 0.9 },
+    tap: { scale: 1.1 },
   };
 
   const compileMessageVariants = {
@@ -71,7 +77,9 @@ export default function ActionToolbar() {
               )}
               <button
                 className={`${
-                  deployStatus === "Failed" ? "bg-red-400 text-white" : "bg-red-500 text-white"
+                  deployStatus === "Failed"
+                    ? "bg-red-400 text-white"
+                    : "bg-red-500 text-white"
                 } rounded-lg px-2 py-[2px]`}
                 onClick={deploy}
               >
@@ -112,11 +120,15 @@ export default function ActionToolbar() {
               <div className="static flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3">
                   <TbBrandGoogleAnalytics className="text-blue-400 text-3xl" />
-                  <span className="text-gray-500 font-semibold">32 Online Now</span>
+                  <span className="text-gray-500 font-semibold">
+                    32 Online Now
+                  </span>
                 </div>
                 <button
                   className={`${
-                    analyticsStatus === "Analytics" ? "bg-blue-400 text-white" : "bg-black text-white"
+                    analyticsStatus === "Analytics"
+                      ? "bg-blue-400 text-white"
+                      : "bg-black text-white"
                   } rounded-lg px-2 py-[2px]`}
                   onClick={analytics}
                 >
@@ -128,13 +140,19 @@ export default function ActionToolbar() {
             <div className="flex items-center gap-3 text-sm">
               <CiDollar className="text-green-600 text-3xl" />
               {billingStatus === "Billing" ? (
-                <span className="text-gray-400 font-semibold mx-2">2 days left in your trial</span>
+                <span className="text-gray-400 font-semibold mx-2">
+                  2 days left in your trial
+                </span>
               ) : (
                 <span className="text-gray-400 font-semibold mx-2">
-                  Upgrade to <span className="text-green-600">Pro</span> and save $12
+                  Upgrade to <span className="text-green-600">Pro</span> and
+                  save $12
                 </span>
               )}
-              <button className="bg-green-600 text-white rounded-lg px-2 py-[2px]" onClick={billing}>
+              <button
+                className="bg-green-600 text-white rounded-lg px-2 py-[2px]"
+                onClick={billing}
+              >
                 <span className="font-semibold">{billingStatus}</span>
               </button>
             </div>
@@ -142,7 +160,9 @@ export default function ActionToolbar() {
         </motion.div>
         <div className="flex gap-8 text-sm font-bold">
           <motion.button
-            className={`${buttonActive === 1 ? "bg-black text-white" : ""} rounded-lg px-1 py-[2px]`}
+            className={`${
+              buttonActive === 1 ? "bg-black text-white" : ""
+            } rounded-lg px-1 py-[2px]`}
             onClick={toggleButton1}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -150,7 +170,9 @@ export default function ActionToolbar() {
             <span>Commit</span>
           </motion.button>
           <motion.button
-            className={`${buttonActive === 2 ? "bg-black text-white" : ""} rounded-lg px-1 py-[2px]`}
+            className={`${
+              buttonActive === 2 ? "bg-black text-white" : ""
+            } rounded-lg px-1 py-[2px]`}
             onClick={toggleButton2}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -158,7 +180,9 @@ export default function ActionToolbar() {
             <span>Analytics</span>
           </motion.button>
           <motion.button
-            className={`${buttonActive === 3 ? "bg-black text-white" : ""} rounded-lg px-1 py-[2px]`}
+            className={`${
+              buttonActive === 3 ? "bg-black text-white" : ""
+            } rounded-lg px-1 py-[2px]`}
             onClick={toggleButton3}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
