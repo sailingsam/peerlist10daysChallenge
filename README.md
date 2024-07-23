@@ -8,8 +8,6 @@ This project is a showcase of various interaction design challenges, implemented
   - `App.jsx`: The main React component that ties the application together.
   - `HomePage.jsx`: The landing page that lists all the challenges.
   - `challenges/`: Directory containing individual challenge components.
-  - `components/`: Reusable components used across the project.
-  - `index.css`: Global styles for the project.
   - `main.jsx`: Entry point for the React application.
 - `public/`: Contains static assets like images and the `index.html` file.
 - `tailwind.config.js`: Configuration file for Tailwind CSS.
@@ -20,17 +18,6 @@ This project is a showcase of various interaction design challenges, implemented
 - React: A JavaScript library for building user interfaces.
 - Vite: A build tool that aims to provide a faster and leaner development experience for modern web projects.
 - Tailwind CSS: A utility-first CSS framework for rapidly building custom designs.
-- ESLint: A static code analysis tool for identifying problematic patterns found in JavaScript code.
 - Framer Motion: A library to power animations in React projects.
+- ESLint: A static code analysis tool for identifying problematic patterns found in JavaScript code.
 - React Router: A collection of navigational components that compose declaratively with your application.
-
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-- Node.js
-- npm
-
-```sh
