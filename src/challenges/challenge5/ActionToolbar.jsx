@@ -78,7 +78,7 @@ export default function ActionToolbar() {
           ) : buttonActive == 2 ? (
             <div className="flex flex-col">
               {analyticsStatus == "close" && (
-                <div className="w-80 text-sm">
+                <div className="w-80 text-sm relative">
                   <div className="flex justify-between">
                     <div className="flex gap-7">
                       <span className="font-semibold">Traffic</span>
@@ -106,7 +106,7 @@ export default function ActionToolbar() {
                   </div>
                 </div>
               )}
-              <div className="flex items-center justify-between gap-3 text-sm">
+              <div className="static flex items-center justify-between gap-3 text-sm">
                 <div className="flex items-center gap-3">
                   <TbBrandGoogleAnalytics className="text-blue-400 text-3xl" />
                   <span className="text-gray-500 font-semibold">
