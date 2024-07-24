@@ -7,6 +7,7 @@ import { Challenge3 } from "./challenges/challenge3";
 import { Challenge4 } from "./challenges/challenge4";
 import { Challenge5 } from "./challenges/challenge5";
 import { Challenge6 } from "./challenges/challenge6";
+import { Challenge7 } from "./challenges/challenge7";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/4" element={<Challenge4 />} />
         <Route path="/5" element={<Challenge5 />} />
         <Route path="/6" element={<Challenge6 />} />
+        <Route path="/7" element={<Challenge7 />} />
       </Routes>
     </BrowserRouter>
   );
