@@ -38,6 +38,11 @@ const challenges = [
     description: "Page Switch Transition",
     challengePage: "Challenge6",
   },
+  {
+    gif: challenge6Gif,
+    description: "Swipe Left",
+    challengePage: "Challenge7",
+  }
 ];
 
 function HomePage() {
