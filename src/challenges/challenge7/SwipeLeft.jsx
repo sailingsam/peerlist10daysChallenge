@@ -50,7 +50,7 @@ function SwipeLeft() {
                 onClick={showCards}
                 className="bg-white text-black w-full p-3 rounded-2xl mt-6"
               >
-                <span>View</span>
+                <span className="font-bold">View</span>
               </button>
             </div>
           )}
