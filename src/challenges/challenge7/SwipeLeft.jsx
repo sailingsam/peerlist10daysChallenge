@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Moneycash from "./Moneycash";
 import { useSwipeable } from "react-swipeable";
+import "./7.css";
 
 function SwipeLeft() {
   const [cards, setCards] = useState([1, 2, 3]);
@@ -54,7 +55,7 @@ function SwipeLeft() {
             </div>
           )}
           {displayCards == true && (
-            <div {...handlers} className="relative w-full">
+            <div {...handlers} className="relative w-full animate-fadeIn">
               {cards.map((card, index) => (
                 <div
                   key={card}
@@ -114,6 +115,7 @@ function SwipeLeft() {
                       <img
                         src="https://www.spreadsheetclass.com/wp-content/uploads/2019/10/Graph-tab-Monthly-Line-Chart-included-with-the-1-year-expense-trackers.jpg"
                         alt="expense graph"
+                        draggable="false"
                       />
                       <button className="w-full p-2 border border-gray-300 rounded-2xl">
                         <span>Full Report</span>
