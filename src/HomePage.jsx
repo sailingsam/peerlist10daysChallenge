@@ -7,6 +7,7 @@ import challenge4Gif from "./challenges/challenge4/4.gif";
 import challenge5Gif from "./challenges/challenge5/5.gif";
 import challenge6Gif from "./challenges/challenge6/6.gif";
 import challenge7Gif from "./challenges/challenge7/7.gif";
+import challenge8Gif from "./challenges/challenge8/8.gif";
 
 const challenges = [
   {
@@ -43,7 +44,12 @@ const challenges = [
     gif: challenge7Gif,
     description: "Swipe Left",
     challengePage: "Challenge7",
-  }
+  },
+  {
+    gif: challenge8Gif,
+    description: "Mobile Navbar",
+    challengePage: "Challenge8",
+  },
 ];
 
 function HomePage() {
