@@ -51,7 +51,7 @@ function MessageReactions() {
                 key={index}
                 className={`flex ${
                   message.sender === "me" ? "justify-end" : "justify-start"
-                } mb-1 relative`}
+                } mb-1 relative ${reactions[index] ? "mb-5" : ""}`}
                 onContextMenu={(e) => {
                   e.preventDefault();
                   handleLongPress(index);
