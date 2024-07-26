@@ -1,20 +1,25 @@
 import React, { useState } from "react";
+import { m, motion } from "framer-motion";
 
 function MessageReactions() {
   const [selectedMessage, setSelectedMessage] = useState(null);
   const [reactions, setReactions] = useState({});
-
   const messages = [
-    { sender: "otherperson", message: "hi", time: "12:00" },
-    { sender: "me", message: "hello", time: "12:01" },
-    { sender: "otherperson", message: "how are you", time: "12:02" },
-    { sender: "me", message: "i am fine", time: "12:03" },
-    { sender: "otherperson", message: "good to hear that", time: "12:04" },
-    { sender: "me", message: "how about you", time: "12:05" },
-    { sender: "otherperson", message: "i am good too", time: "12:06" },
-    { sender: "me", message: "bye", time: "12:07" },
-    { sender: "otherperson", message: "bye", time: "12:08" },
+    { sender: "otherperson", message: "Hey Saksham! What’s up?", time: "" },
+    { sender: "me", message: "Hey man!", time: "" },
+    { sender: "me", message: "Working on #IxDChallenge 9", time: "" },
+    { sender: "me", message: "Message Reactions: Trying to create WhatsApp-style reactions feature", time: "" },
+    { sender: "otherperson", message: "Sounds cool! What’s the end goal?", time: "" },
+    { sender: "me", message: "Showcasing & Learning new skills", time: "" },
+    { sender: "me", message: "I’m also looking for MERN or full stack internships.", time: "" },
+    { sender: "otherperson", message: "Got it! I’ll keep an eye out for opportunities.", time: "" },
+    { sender: "me", message: "Thanks! Excited to wrap up this challenge and find great connections", time: "" },
+    { sender: "otherperson", message: "All the best! Keep me posted.", time: "" },
+
   ];
+  
+  
+  
 
   const handleLongPress = (index) => {
     setSelectedMessage(index);
@@ -54,26 +59,36 @@ function MessageReactions() {
                 onTouchStart={() => handleLongPress(index)}
               >
                 <div
-                  className={`p-1 text-center max-w-64 ${
+                  className={`p-1 text-center max-w-60 ${
                     message.sender === "me"
                       ? "bg-[#a4f09d] rounded-tl-lg rounded-b-lg"
                       : "bg-white rounded-tr-lg rounded-b-lg"
-                  } relative flex-wrap text-xs`}
+                  } relative flex-wrap text-xs text-start`}
                 >
                   <p>{message.message}</p>
                   {reactions[index] && (
-                    <span className={`absolute  ${message.sender === "me" ? "-bottom-4 right-2" : "-bottom-4 left-2"} bg-white rounded-full p-[2px] text-xs`}>
+                    <span
+                      className={`absolute ${
+                        message.sender === "me"
+                          ? "-bottom-4 right-2"
+                          : "-bottom-4 left-2"
+                      } bg-white rounded-full p-[2px] text-xs`}
+                    >
                       {reactions[index]}
                     </span>
                   )}
                 </div>
                 {selectedMessage === index && (
-                  <div className="absolute inset-0">
+                  <motion.div className="absolute inset-0 ease-in-out">
                     <div className="absolute inset-0 bg-blue-200 opacity-50"></div>
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, scale: 1 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 1 }}
+                      transition={{ duration: 0.3 }}
                       className={`absolute bottom-4 flex ${
                         message.sender === "me" ? "right-3" : "left-3"
-                      }  gap-0 justify-center items-center text-xs px-1 delay-200 bg-white rounded-full`}
+                      } gap-0 justify-center items-center text-xs px-1 delay-200 bg-white rounded-full`}
                     >
                       {["👍", "❤️", "😂", "😮", "😢", "🙏"].map((emoji) => (
                         <button
@@ -86,9 +101,11 @@ function MessageReactions() {
                           {emoji}
                         </button>
                       ))}
-                      <div className="bg-gray-200 rounded-full w-4 h-4 p-1 text-lg flex justify-center items-center text-gray-600">+</div>
-                    </div>
-                  </div>
+                      <div className="bg-gray-200 rounded-full w-4 h-4 p-1 text-lg flex justify-center items-center text-gray-600">
+                        +
+                      </div>
+                    </motion.div>
+                  </motion.div>
                 )}
               </div>
             ))}
