@@ -9,6 +9,7 @@ import { Challenge5 } from "./challenges/challenge5";
 import { Challenge6 } from "./challenges/challenge6";
 import { Challenge7 } from "./challenges/challenge7";
 import { Challenge8 } from "./challenges/challenge8";
+import { Challenge9 } from "./challenges/challenge9";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/6" element={<Challenge6 />} />
         <Route path="/7" element={<Challenge7 />} />
         <Route path="/8" element={<Challenge8 />} />
+        <Route path="/9" element={<Challenge9 />} />
       </Routes>
     </BrowserRouter>
   );
