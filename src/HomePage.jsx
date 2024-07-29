@@ -10,6 +10,7 @@ import challenge7Gif from "./challenges/challenge7/7.gif";
 import challenge8Gif from "./challenges/challenge8/8.gif";
 import challenge9Gif from "./challenges/challenge9/9.gif";
 import challenge10Gif from "./challenges/challenge10/10.gif";
+import Footer from "./components/Footer";
 
 const challenges = [
   {
@@ -84,6 +85,7 @@ function HomePage() {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
