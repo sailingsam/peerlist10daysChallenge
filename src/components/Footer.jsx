@@ -4,15 +4,15 @@ import { SiPeerlist } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <div className="mt-20 w-full max-w-2xl mx-auto">
+    <div className="mt-20 w-full md:max-w-2xl mx-auto p-4">
       <table
         role="presentation"
         className="w-full border-none m-0 border-collapse"
       >
         <tbody>
-          <tr className="flex">
-            <td>
-              <div className="w-16 h-16 mr-1">
+          <tr className="flex flex-col md:flex-row">
+            <td className="mb-4 md:mb-0 md:mr-4">
+              <div className="w-16 h-16">
                 <a
                   href="https://peerlist.io/sailingsam"
                   target="_blank"
@@ -28,14 +28,14 @@ export default function Footer() {
                 </a>
               </div>
             </td>
-            <td>
+            <td className="w-full">
               <table
                 role="presentation"
                 className="w-full border-none m-0 border-collapse"
               >
                 <tbody>
                   <tr className="font-semibold">
-                    <td className="">
+                    <td>
                       <a
                         href="https://peerlist.io/sailingsam"
                         target="_blank"
@@ -62,7 +62,7 @@ export default function Footer() {
               >
                 <tbody>
                   <tr className="w-full border-t border-gray-300">
-                    <td className="p-2 w-1/3">
+                    <div className="sm:flex w-full sm:gap-5 my-2">
                       <p className="text-sm m-0 leading-6">
                         <span className="text-gray-500">Email</span>
                         <a
@@ -72,8 +72,6 @@ export default function Footer() {
                           jainsaksham1004@gmail.com
                         </a>
                       </p>
-                    </td>
-                    <td className="pt-2 pb-2 w-1/3">
                       <p className="text-sm m-0 leading-6">
                         <span className="text-gray-500">Website</span>
                         <a
@@ -85,7 +83,7 @@ export default function Footer() {
                           https://Sailingsam.vercel.app
                         </a>
                       </p>
-                    </td>
+                    </div>
                   </tr>
                 </tbody>
               </table>
@@ -95,24 +93,25 @@ export default function Footer() {
               >
                 <tbody>
                   <tr>
-                    <td className="inline-block flex">
-                        <button className="inline-block bg-green-500 rounded-full mx-2 px-2">
-                            <a className="flex text-center items-center gap-1"
-                                href="https://peerlist.io/sailingsam"
-                                target="_blank"
-                                rel="noreferrer"
-                                title="Peerlist"
-                            >
-                                <SiPeerlist className="table-cell align-middle w-4 h-4" />
-                                Peerlist
-                            </a>
-                        </button>
+                    <td className="inline-block flex flex-wrap">
+                      <button className="inline-block bg-green-500 rounded-full mx-2 px-2 mb-2 md:mb-0">
+                        <a
+                          className="flex text-center items-center gap-1"
+                          href="https://peerlist.io/sailingsam"
+                          target="_blank"
+                          rel="noreferrer"
+                          title="Peerlist"
+                        >
+                          <SiPeerlist className="table-cell align-middle w-4 h-4" />
+                          Peerlist
+                        </a>
+                      </button>
                       <a
                         href="https://twitter.com/jainsaksham1004"
                         target="_blank"
                         rel="noreferrer"
                         title="social-icon-twitter"
-                        className="inline-block mr-2 rounded-full border border-gray-300 p-1.5"
+                        className="inline-block mr-2 rounded-full border border-gray-300 p-1.5 mb-2 md:mb-0"
                       >
                         <img
                           src="https://peerlist-media.s3.amazonaws.com/media/twitter.png"
@@ -125,7 +124,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noreferrer"
                         title="social-icon-linkedin"
-                        className="inline-block mr-2 rounded-full border border-gray-300 p-1.5"
+                        className="inline-block mr-2 rounded-full border border-gray-300 p-1.5 mb-2 md:mb-0"
                       >
                         <FaLinkedin className="table-cell align-middle w-4 h-4" />
                       </a>

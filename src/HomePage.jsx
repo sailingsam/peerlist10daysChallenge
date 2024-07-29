@@ -67,26 +67,30 @@ const challenges = [
 
 function HomePage() {
   return (
-    <div className="p-10">
-      <h1 className="text-center text-3xl font-bold mb-8">
-        Peerlist Interaction Design Challenge #ixdchallenge
-      </h1>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        {challenges.map((challenge, index) => (
-          <Link to={`/${index + 1}`} key={index}>
-            <div className="bg-white h-full p-4 rounded-lg shadow-xl hover:shadow-gray-700 flex flex-col items-center">
-              <img
-                src={challenge.gif}
-                alt={challenge.challengePage}
-                className="mb-4"
-              />
-              <span className="text-xs sm:text-base">{challenge.description}</span>
-            </div>
-          </Link>
-        ))}
+    <>
+      <div className="p-10">
+        <h1 className="text-center text-3xl font-bold mb-8">
+          Peerlist Interaction Design Challenge #ixdchallenge
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          {challenges.map((challenge, index) => (
+            <Link to={`/${index + 1}`} key={index}>
+              <div className="bg-white h-full p-4 rounded-lg shadow-xl hover:shadow-gray-700 flex flex-col items-center">
+                <img
+                  src={challenge.gif}
+                  alt={challenge.challengePage}
+                  className="mb-4"
+                />
+                <span className="text-xs sm:text-base">
+                  {challenge.description}
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
